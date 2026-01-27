@@ -8,6 +8,10 @@ This project follows a **Hexagonal Architecture** (also known as Ports and Adapt
 
 This separation ensures clean boundaries, testability, and flexibility to change infrastructure components without affecting business logic.
 
+Domain defines behavior and needs.
+Infrastructure fulfills the needs.
+Application coordinates the flow.
+
 ## Folder Structure
 
 ```
@@ -16,7 +20,6 @@ src/main/java/com/pmdaiclientrest/
 │   ├── prompt/
 │   └── usecase/
 ├── domain/
-│   ├── config/
 │   ├── port/
 │   │   ├── in/
 │   │   └── out/
@@ -40,5 +43,5 @@ src/main/java/com/pmdaiclientrest/
 Use this command when setting up a new project with the same architectural structure. Run it from your base package directory (e.g., `src/main/java/com/yourproject/`):
 
 ```bash
-mkdir -p {application/{prompt,usecase},domain/{config,port/{in,out},service},infrastructure/{adapter/{in/web/{controller,dto,openapi},out/ai/dto},config}}
+mkdir -p {application/{prompt,usecase},domain/{port/{in,out},service},infrastructure/{adapter/{in/web/{controller,dto,openapi},out/ai/dto},config}}
 ```

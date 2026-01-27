@@ -1,4 +1,4 @@
-package com.pmdaiclientrest.infrastructure.web.dto;
+package com.pmdaiclientrest.infrastructure.adapter.in.web.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

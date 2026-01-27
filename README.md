@@ -42,3 +42,7 @@ This allows the API to support multiple providers such as:
 - Any future AI platform
 
 Switching providers does not require changes to controllers or public API endpoints.
+
+## Architecture
+
+For detailed information about the project architecture and folder structure, see [ARCHITECTURE.md](./ARCHITECTURE.md).

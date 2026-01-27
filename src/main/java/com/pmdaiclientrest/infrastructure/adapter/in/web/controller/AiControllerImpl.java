@@ -1,9 +1,9 @@
-package com.pmdaiclientrest.infrastructure.web.controller;
+package com.pmdaiclientrest.infrastructure.adapter.in.web.controller;
 
 import com.pmdaiclientrest.application.usecase.GenerateAiResponseUseCase;
-import com.pmdaiclientrest.infrastructure.web.dto.AiClientPromptRequest;
-import com.pmdaiclientrest.infrastructure.web.dto.AiClientPromptResponse;
-import com.pmdaiclientrest.infrastructure.web.openapi.AiController;
+import com.pmdaiclientrest.infrastructure.adapter.in.web.dto.AiClientPromptRequest;
+import com.pmdaiclientrest.infrastructure.adapter.in.web.dto.AiClientPromptResponse;
+import com.pmdaiclientrest.infrastructure.adapter.in.web.openapi.AiController;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

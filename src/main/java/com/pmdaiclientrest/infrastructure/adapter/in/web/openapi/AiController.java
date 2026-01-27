@@ -1,7 +1,7 @@
-package com.pmdaiclientrest.infrastructure.web.openapi;
+package com.pmdaiclientrest.infrastructure.adapter.in.web.openapi;
 
-import com.pmdaiclientrest.infrastructure.web.dto.AiClientPromptRequest;
-import com.pmdaiclientrest.infrastructure.web.dto.AiClientPromptResponse;
+import com.pmdaiclientrest.infrastructure.adapter.in.web.dto.AiClientPromptRequest;
+import com.pmdaiclientrest.infrastructure.adapter.in.web.dto.AiClientPromptResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
