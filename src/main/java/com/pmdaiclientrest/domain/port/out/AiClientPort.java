@@ -1,5 +1,7 @@
 package com.pmdaiclientrest.domain.port.out;
 
+import com.pmdaiclientrest.domain.model.AiResponse;
+
 /**
  * Domain port that defines the contract for generating
  * AI-based responses from a textual prompt.
@@ -15,5 +17,5 @@ public interface AiClientPort {
      * @param prompt the input text
      * @return the generated response
      */
-    String generateResponse(String prompt);
+    AiResponse generateResponse(String prompt);
 }

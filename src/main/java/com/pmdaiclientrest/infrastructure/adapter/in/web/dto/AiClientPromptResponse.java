@@ -2,7 +2,6 @@ package com.pmdaiclientrest.infrastructure.adapter.in.web.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
-// TODO: Reestructurar el response a los fields necesarios
 @Schema(description = "AI-generated response returned to the client")
 public record AiClientPromptResponse(
 

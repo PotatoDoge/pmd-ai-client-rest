@@ -1,5 +1,7 @@
 package com.pmdaiclientrest.application.usecase;
 
+import com.pmdaiclientrest.domain.model.AiResponse;
+
 /**
  * Use case responsible for generating an AI response
  * from a client-provided prompt.
@@ -15,5 +17,5 @@ public interface GenerateAiResponseUseCase {
      * @param prompt the input text provided by the client
      * @return the generated response text
      */
-    String generate(String prompt);
+    AiResponse generate(String prompt);
 }

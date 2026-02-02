@@ -43,5 +43,5 @@ src/main/java/com/pmdaiclientrest/
 Use this command when setting up a new project with the same architectural structure. Run it from your base package directory (e.g., `src/main/java/com/yourproject/`):
 
 ```bash
-mkdir -p {application/{prompt,usecase},domain/{port/{in,out},service},infrastructure/{adapter/{in/web/{controller,dto,openapi},out/ai/dto},config}}
+mkdir -p {application/{prompt,usecase},domain/{port/{in,out},service},infrastructure/{adapter/{in/web/{controller,HttpResponse,openapi},out/ai/HttpResponse},config}}
 ```

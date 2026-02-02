@@ -1,5 +1,6 @@
 package com.pmdaiclientrest.domain.service;
 
+import com.pmdaiclientrest.domain.model.AiResponse;
 import com.pmdaiclientrest.domain.port.in.GenerateAiResponsePort;
 import com.pmdaiclientrest.domain.port.out.AiClientPort;
 
@@ -16,7 +17,7 @@ public class GenerateAiResponseService implements GenerateAiResponsePort {
     }
 
     @Override
-    public String generate(String prompt) {
+    public AiResponse generate(String prompt) {
         // Domain rules can live here:
         // - validation
         // - prompt enrichment

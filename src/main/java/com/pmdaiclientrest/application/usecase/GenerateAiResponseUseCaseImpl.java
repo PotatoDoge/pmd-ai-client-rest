@@ -1,5 +1,6 @@
 package com.pmdaiclientrest.application.usecase;
 
+import com.pmdaiclientrest.domain.model.AiResponse;
 import com.pmdaiclientrest.domain.port.in.GenerateAiResponsePort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -15,10 +16,10 @@ import org.springframework.stereotype.Service;
 public class GenerateAiResponseUseCaseImpl
         implements GenerateAiResponseUseCase {
 
-    private final GenerateAiResponsePort domainPort;
+    private final GenerateAiResponsePort generateAiResponsePort;
 
     @Override
-    public String generate(String prompt) {
-        return domainPort.generate(prompt);
+    public AiResponse generate(String prompt) {
+        return generateAiResponsePort.generate(prompt);
     }
 }
