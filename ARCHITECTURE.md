@@ -17,9 +17,10 @@ Application coordinates the flow.
 ```
 src/main/java/com/pmdaiclientrest/
 ├── application/
-│   ├── prompt/
 │   └── usecase/
 ├── domain/
+│   ├── exception/
+│   ├── model/
 │   ├── port/
 │   │   ├── in/
 │   │   └── out/
@@ -30,10 +31,15 @@ src/main/java/com/pmdaiclientrest/
 │   │   │   └── web/
 │   │   │       ├── controller/
 │   │   │       ├── dto/
+│   │   │       ├── exception/
+│   │   │       ├── mapper/
 │   │   │       └── openapi/
 │   │   └── out/
 │   │       └── ai/
-│   │           └── dto/
+│   │           ├── dto/
+│   │           ├── mapper/
+│   │           ├── openai/
+│   │           └── util/
 │   └── config/
 └── PmdAiClientRestApplication.java
 ```
@@ -43,5 +49,17 @@ src/main/java/com/pmdaiclientrest/
 Use this command when setting up a new project with the same architectural structure. Run it from your base package directory (e.g., `src/main/java/com/yourproject/`):
 
 ```bash
-mkdir -p {application/{prompt,usecase},domain/{port/{in,out},service},infrastructure/{adapter/{in/web/{controller,HttpResponse,openapi},out/ai/HttpResponse},config}}
+mkdir -p {application/usecase,domain/{exception,model,port/{in,out},service},infrastructure/{adapter/{in/web/{controller,dto,exception,mapper,openapi},out/ai/{dto,mapper,openai,util}},config}}
 ```
+
+## Notes
+
+- **Dependency Rule**: Dependencies always point inwards. The Domain layer is the core and has no dependencies on other layers.
+- **Ports & Adapters**: 
+    - **Inbound Ports**: Interfaces defined in the domain, implemented by application services (use cases).
+    - **Outbound Ports**: Interfaces defined in the domain, implemented by infrastructure adapters.
+- **Mapping Strategy**: Each layer has its own data models (DTOs in Infrastructure, Domain Models in Domain). Mappers are used in the infrastructure layer to convert between these models, ensuring the domain remains isolated.
+- **Validation**:
+    - Input validation is handled at the adapter level (e.g., Web DTOs).
+    - Business validation is handled within the Domain layer.
+- **Error Handling**: A Global Exception Handler in the web adapter translates domain exceptions into appropriate HTTP responses.
