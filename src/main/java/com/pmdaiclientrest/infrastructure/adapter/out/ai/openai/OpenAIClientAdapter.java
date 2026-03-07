@@ -1,7 +1,7 @@
 package com.pmdaiclientrest.infrastructure.adapter.out.ai.openai;
 
+import com.pmdaiclientrest.application.port.out.AiClientPort;
 import com.pmdaiclientrest.domain.model.AiResponse;
-import com.pmdaiclientrest.domain.port.out.AiClientPort;
 import com.pmdaiclientrest.infrastructure.adapter.out.ai.PromptValidator;
 import com.pmdaiclientrest.infrastructure.adapter.out.ai.dto.OpenAiChatRequest;
 import com.pmdaiclientrest.infrastructure.adapter.out.ai.dto.OpenAiChatResponse;
